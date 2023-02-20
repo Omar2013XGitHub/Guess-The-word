@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(45deg, #feb152, #fd44fa);
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+.game {
+    width: 100%;
+}
+.game input {
+    resize: none;
+    border: 5px #9af1f9 solid;
+    background-color: #ffffff3a;
+    outline: none;
+    border-radius: 10px;
+    height: 80px;
+    width: 60px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+.game button {
+    margin: 20px;
+    outline: none;
+    border: none;
+    background-color: #ffffff3a;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+}
+button#retry.shown {
+    border: 5px #9af1f9 solid !important;
+    padding: 15px 40px !important;
+    width: fit-content !important;
+    height: fit-content !important;
+    overflow: visible !important;
+}
+.game button:hover {
+    background-color: #9af1f9;
+}
+.game .inps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+h2 {
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+}
+span.true {
+    color: lime;
+    animation: opac 0.3s 0s;
+    display: flex;
+    flex-direction: row;
+}
+span.false {
+    color: red;
+    animation: opac 0.3s 0s;
+    display: flex;
+    flex-direction: row;
+}
+span.false span.span {
+    letter-spacing: -5px;
+}
+span.span {
+    display: block;
+    transform: rotate(66deg);
+    width: fit-content;
+    height: fit-content;
+}
+@keyframes opac {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
